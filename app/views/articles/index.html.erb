@@ -1,0 +1,9 @@
+<ul>
+  <% @articles.each do |article| %>
+    <li><%= link_to article.title.capitalize, article_path(article)%></li>
+
+    <li><%= article.content %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Create New article', new_article_path %>
