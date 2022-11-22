@@ -1,9 +1,11 @@
-<ul>
-  <% @articles.each do |article| %>
-    <li><%= link_to article.title.capitalize, article_path(article)%></li>
+<div class="container">
+  <ul>
+    <% @articles.each do |article| %>
+      <li class="display-6"><%= link_to article.title.capitalize, article_path(article)%></li>
 
-    <li><%= article.content %></li>
-  <% end %>
-</ul>
+      <li class="blockquote"><%= article.content %></li>
+    <% end %>
+  </ul>
+</div>
 
-<%= link_to 'Create New article', new_article_path %>
+<%# <%= link_to 'Create New article', new_article_path %> %>

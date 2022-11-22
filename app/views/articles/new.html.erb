@@ -1,9 +1,16 @@
-<%= form_with model: @article do |f|%>
-<%= f.label :title %>
-<%= f.text_field :title %>
-<%= f.label :content %>
-<%= f.text_field :content %>
-<%= f.submit %>
-<% end %>
+
+<div class="container">
+  <div class="mb-3 form-control">
+    <h1>New Article</h1>
+
+    <%= form_with model: @article do |f|%>
+    <label class="form-label"><%= f.label :title %></label>
+    <input class="form-control"<%= f.text_field :title %>>
+    <label class="form-label"><%= f.label :content %></label>
+    <input class="form-control"<%= f.text_field :content %>>
+    <%= f.submit %>
+    <% end %>
+  </div>
+</div>
 
 <%= link_to 'Back to list', articles_path %>
